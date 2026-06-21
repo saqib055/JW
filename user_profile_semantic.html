@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>JumpWhere User Profile</title>
+  <meta name="description" content="A semantic HTML5 user profile page with contact form.">
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.6;
+      color: #222;
+      background: #f5f7fb;
+    }
+
+    header,
+    nav,
+    main,
+    footer {
+      padding: 1rem;
+    }
+
+    header {
+      background: #1f2937;
+      color: #ffffff;
+      text-align: center;
+    }
+
+    nav {
+      background: #ffffff;
+      border-bottom: 1px solid #d1d5db;
+      text-align: center;
+    }
+
+    nav a {
+      margin: 0 0.75rem;
+      color: #1f2937;
+      text-decoration: none;
+      font-weight: 700;
+    }
+
+    nav a:focus,
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    main {
+      max-width: 960px;
+      margin: 1rem auto;
+    }
+
+    article,
+    aside,
+    section {
+      background: #ffffff;
+      border: 1px solid #d1d5db;
+      border-radius: 0.75rem;
+      padding: 1.25rem;
+      margin-bottom: 1rem;
+    }
+
+    img {
+      display: block;
+      max-width: 180px;
+      height: auto;
+      border-radius: 50%;
+      border: 3px solid #e5e7eb;
+      margin-bottom: 1rem;
+    }
+
+    label {
+      display: block;
+      font-weight: 700;
+      margin-top: 0.75rem;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      box-sizing: border-box;
+      padding: 0.75rem;
+      margin-top: 0.25rem;
+      border: 1px solid #9ca3af;
+      border-radius: 0.5rem;
+      font: inherit;
+    }
+
+    button {
+      margin-top: 1rem;
+      padding: 0.75rem 1rem;
+      border: 0;
+      border-radius: 0.5rem;
+      background: #2563eb;
+      color: #ffffff;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    button:focus,
+    button:hover {
+      background: #1d4ed8;
+    }
+
+    footer {
+      background: #1f2937;
+      color: #ffffff;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>JumpWhere Profiles</h1>
+    <p>Student and professional learning profiles powered by backend data.</p>
+  </header>
+
+  <nav aria-label="Primary navigation">
+    <a href="#profile">Profile</a>
+    <a href="#related-info">Related Info</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <main>
+    <article id="profile">
+      <h2>User Profile</h2>
+      <img
+        src="https://via.placeholder.com/180"
+        width="180"
+        height="180"
+        alt="Profile photo placeholder for Aisha Rao"
+      >
+      <h3>Aisha Rao</h3>
+      <p>
+        Aisha Rao is a computer science student interested in backend development,
+        problem solving, Git workflows, and learning how to search effectively using
+        reliable online sources. This profile represents data that could be returned
+        from a Python backend query and rendered on the frontend.
+      </p>
+    </article>
+
+    <aside id="related-info" aria-labelledby="related-heading">
+      <h2 id="related-heading">Related Info</h2>
+      <p><strong>Role:</strong> Backend Development Learner</p>
+      <p><strong>Current Focus:</strong> REST APIs, Git, HTML5, and search skills</p>
+      <p><strong>Learning Goal:</strong> Build clean, validated, and well-documented web projects.</p>
+    </aside>
+
+    <section id="contact" aria-labelledby="contact-heading">
+      <h2 id="contact-heading">Contact This User</h2>
+      <form action="/api/contact" method="post">
+        <p>
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" autocomplete="name" required>
+        </p>
+
+        <p>
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" autocomplete="email" required>
+        </p>
+
+        <p>
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
+        </p>
+
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 JumpWhere Profiles. All rights reserved.</p>
+  </footer>
+</body>
+</html>
